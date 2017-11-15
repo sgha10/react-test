@@ -12,7 +12,7 @@ let config = {
     publicPath: "/app/"
   },
   module: {
-    loaders: [
+    loaders: [ 
       {
          test: /\.js?/,
          include: SRC_DIR,
@@ -20,6 +20,9 @@ let config = {
          query: {
            presets: ["react", "es2015", "stage-2"]
          }
+      } , 
+      {
+        test: /\.css$/, loader: "style-loader!css-loader" 
       }
     ],
   }
